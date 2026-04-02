@@ -6,26 +6,22 @@
         window.dataLayer.push(arguments);
     };
 
-    const gtagConsentAll = {
+    const gtagConsentGranted = {
         ad_storage: 'granted',
         ad_user_data: 'granted',
         ad_personalization: 'granted',
         analytics_storage: 'granted',
-        functionality_storage: 'granted',
-        security_storage: 'granted',
     };
 
-    const gtagConsentNecessaryOnly = {
+    const gtagConsentDenied = {
         ad_storage: 'denied',
         ad_user_data: 'denied',
         ad_personalization: 'denied',
         analytics_storage: 'denied',
-        functionality_storage: 'granted',
-        security_storage: 'granted',
     };
 
     gtag('consent', 'default', {
-        ...gtagConsentNecessaryOnly,
+        ...gtagConsentGranted,
         wait_for_update: 500,
     });
 
@@ -35,10 +31,10 @@
     try {
         const savedConsent = localStorage.getItem('cookie_consent_choice');
 
-        if (savedConsent === 'all' || savedConsent === 'accepted') {
-            gtag('consent', 'update', gtagConsentAll);
-        } else if (savedConsent === 'necessary' || savedConsent === 'rejected') {
-            gtag('consent', 'update', gtagConsentNecessaryOnly);
+        if (savedConsent === 'accepted') {
+            gtag('consent', 'update', gtagConsentGranted);
+        } else if (savedConsent === 'rejected') {
+            gtag('consent', 'update', gtagConsentDenied);
         }
     } catch (error) {
         // Ignore localStorage access errors (e.g. private mode restrictions).

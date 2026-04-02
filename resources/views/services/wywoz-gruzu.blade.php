@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX8PN8NK6Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BX8PN8NK6Z');
+    </script>
     <title>Wywóz Gruzu Narol - Usuwanie Odpadów Budowlanych | FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</title>
     <meta name="description" content="Wywóz gruzu i humusu w Narolu - profesjonalne usuwanie odpadów budowlanych. Tel: 508 392 907">
     @vite(['resources/css/app.css', 'resources/js/app.js'])

@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX8PN8NK6Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BX8PN8NK6Z');
+    </script>
     <title>Roboty Ziemne Narol | Usługi Koparką i Transport Kruszywa - FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</title>
     <meta name="description" content="Roboty ziemne i transport kruszywa w Narolu i okolicach. Wykopy pod fundamenty, usługi koparką, niwelacja terenu, wywóz gruzu i humusu. Tel: 508 392 907.">
     <link rel="canonical" href="{{ url()->current() }}">
@@ -155,15 +164,32 @@
         <div class="mx-auto max-w-7xl">
             <h2 class="text-3xl font-black text-gray-900 sm:text-4xl">Realizacje</h2>
             <p class="mt-3 max-w-3xl text-gray-600">Przykładowe prace wykonane na terenie Narola i okolicznych miejscowości.</p>
-            <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-                <img src="/images/koparka.jpeg" alt="Koparka podczas robót ziemnych w Narolu" class="h-44 w-full rounded-lg object-cover shadow-sm">
-                <img src="/images/minikoparka.jpeg" alt="Minikoparka przy pracach ziemnych" class="h-44 w-full rounded-lg object-cover shadow-sm">
-                <img src="/images/fundamenty_wykop.jpeg" alt="Wykop pod fundamenty" class="h-44 w-full rounded-lg object-cover shadow-sm">
-                <img src="/images/kruszywo.jpeg" alt="Transport kruszywa na budowę" class="h-44 w-full rounded-lg object-cover shadow-sm">
-                <img src="/images/auto_dostawcze.jpeg" alt="Dostawa materiałów budowlanych" class="h-44 w-full rounded-lg object-cover shadow-sm">
+            <div id="realizacje-gallery" class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+                <button type="button" class="gallery-item overflow-hidden rounded-lg shadow-sm transition hover:opacity-90" data-src="/images/koparka.jpeg" data-alt="Koparka podczas robót ziemnych w Narolu">
+                    <img src="/images/koparka.jpeg" alt="Koparka podczas robót ziemnych w Narolu" class="h-44 w-full object-cover">
+                </button>
+                <button type="button" class="gallery-item overflow-hidden rounded-lg shadow-sm transition hover:opacity-90" data-src="/images/minikoparka.jpeg" data-alt="Minikoparka przy pracach ziemnych">
+                    <img src="/images/minikoparka.jpeg" alt="Minikoparka przy pracach ziemnych" class="h-44 w-full object-cover">
+                </button>
+                <button type="button" class="gallery-item overflow-hidden rounded-lg shadow-sm transition hover:opacity-90" data-src="/images/fundamenty_wykop.jpeg" data-alt="Wykop pod fundamenty">
+                    <img src="/images/fundamenty_wykop.jpeg" alt="Wykop pod fundamenty" class="h-44 w-full object-cover">
+                </button>
+                <button type="button" class="gallery-item overflow-hidden rounded-lg shadow-sm transition hover:opacity-90" data-src="/images/kruszywo.jpeg" data-alt="Transport kruszywa na budowę">
+                    <img src="/images/kruszywo.jpeg" alt="Transport kruszywa na budowę" class="h-44 w-full object-cover">
+                </button>
+                <button type="button" class="gallery-item overflow-hidden rounded-lg shadow-sm transition hover:opacity-90" data-src="/images/auto_dostawcze.jpeg" data-alt="Dostawa materiałów budowlanych">
+                    <img src="/images/auto_dostawcze.jpeg" alt="Dostawa materiałów budowlanych" class="h-44 w-full object-cover">
+                </button>
             </div>
         </div>
     </section>
+
+    <div id="gallery-modal" class="fixed inset-0 z-[80] hidden items-center justify-center bg-black/85 p-4">
+        <button id="gallery-close" type="button" class="absolute right-4 top-4 rounded bg-white/10 px-3 py-1 text-sm font-semibold text-white hover:bg-white/20">Zamknij</button>
+        <button id="gallery-prev" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 rounded bg-white/10 px-3 py-2 text-lg font-bold text-white hover:bg-white/20">‹</button>
+        <img id="gallery-image" src="" alt="" class="max-h-[88vh] max-w-[92vw] rounded-xl object-contain">
+        <button id="gallery-next" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 rounded bg-white/10 px-3 py-2 text-lg font-bold text-white hover:bg-white/20">›</button>
+    </div>
 
     <section id="obszar" class="bg-gray-50 px-4 py-16 sm:py-20">
         <div class="mx-auto max-w-7xl">
@@ -228,5 +254,80 @@
             <p>Narol | UL. KOŚCIUSZKI DZ 415</p>
         </div>
     </footer>
+    <script>
+        (() => {
+            const galleryItems = Array.from(document.querySelectorAll('#realizacje-gallery .gallery-item'));
+            const modal = document.getElementById('gallery-modal');
+            const image = document.getElementById('gallery-image');
+            const closeBtn = document.getElementById('gallery-close');
+            const prevBtn = document.getElementById('gallery-prev');
+            const nextBtn = document.getElementById('gallery-next');
+
+            if (!galleryItems.length || !modal || !image || !closeBtn || !prevBtn || !nextBtn) {
+                return;
+            }
+
+            let currentIndex = 0;
+
+            const renderImage = () => {
+                const active = galleryItems[currentIndex];
+                image.src = active.dataset.src || '';
+                image.alt = active.dataset.alt || '';
+            };
+
+            const openModal = (index) => {
+                currentIndex = index;
+                renderImage();
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+            };
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            };
+
+            const showPrev = () => {
+                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                renderImage();
+            };
+
+            const showNext = () => {
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                renderImage();
+            };
+
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => openModal(index));
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            prevBtn.addEventListener('click', showPrev);
+            nextBtn.addEventListener('click', showNext);
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (modal.classList.contains('hidden')) {
+                    return;
+                }
+
+                if (event.key === 'Escape') {
+                    closeModal();
+                }
+                if (event.key === 'ArrowLeft') {
+                    showPrev();
+                }
+                if (event.key === 'ArrowRight') {
+                    showNext();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

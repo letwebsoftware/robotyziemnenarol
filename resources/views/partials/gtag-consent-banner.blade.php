@@ -21,23 +21,6 @@
         const acceptButton = document.getElementById('cookie-consent-accept');
         const rejectButton = document.getElementById('cookie-consent-reject');
 
-        if (!banner || !acceptButton || !rejectButton || typeof window.gtag !== 'function') {
-            return;
-        }
-
-        const grantedConsent = {
-            ad_storage: 'granted',
-            ad_user_data: 'granted',
-            ad_personalization: 'granted',
-            analytics_storage: 'granted',
-        };
-
-        const deniedConsent = {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            analytics_storage: 'denied',
-        };
 
         const hideBanner = () => {
             banner.classList.add('hidden');
@@ -72,13 +55,11 @@
 
         acceptButton.addEventListener('click', () => {
             persistChoice('accepted');
-            window.gtag('consent', 'update', grantedConsent);
             hideBanner();
         });
 
         rejectButton.addEventListener('click', () => {
             persistChoice('rejected');
-            window.gtag('consent', 'update', deniedConsent);
             hideBanner();
         });
     })();

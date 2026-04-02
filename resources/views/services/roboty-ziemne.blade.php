@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX8PN8NK6Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-BX8PN8NK6Z');
-    </script>
+    @include('partials.gtag-consent-head')
     <title>Roboty Ziemne Narol - Koparki, Wykopy Pod Fundamenty | FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</title>
     <meta name="description" content="Roboty ziemne w Narolu - wykopy pod fundamenty, przyłącza wodne i kanalizacyjne, korytowanie dróg. Tel: 508 392 907">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -216,5 +208,6 @@
             </div>
         </div>
     </footer>
+    @include('partials.gtag-consent-banner')
 </body>
 </html>

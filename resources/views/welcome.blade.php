@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX8PN8NK6Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-BX8PN8NK6Z');
-    </script>
+    @include('partials.gtag-consent-head')
     <title>Roboty Ziemne Narol | Usługi Koparką i Transport Kruszywa - FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</title>
     <meta name="description" content="Roboty ziemne i transport kruszywa w Narolu i okolicach. Wykopy pod fundamenty, usługi koparką, niwelacja terenu, wywóz gruzu i humusu. Tel: 508 392 907.">
     <link rel="canonical" href="{{ url()->current() }}">
@@ -329,5 +321,6 @@
             });
         })();
     </script>
+    @include('partials.gtag-consent-banner')
 </body>
 </html>

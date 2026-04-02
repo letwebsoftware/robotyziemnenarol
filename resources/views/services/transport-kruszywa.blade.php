@@ -44,7 +44,7 @@
     <!-- BREADCRUMB -->
     <div class="bg-gray-50 py-4 px-4">
         <div class="max-w-7xl mx-auto">
-            <a href="/" class="text-yellow-500 hover:text-yellow-600">Strona główna</a> / <span class="text-gray-600">Transport Kruszywa</span>
+            <a href="/" class="text-yellow-500 hover:text-yellow-600">Strona główna</a> / <a href="/#uslugi" class="text-yellow-500 hover:text-yellow-600">Usługi</a> / <span class="text-gray-600">Transport Kruszywa</span>
         </div>
     </div>
 

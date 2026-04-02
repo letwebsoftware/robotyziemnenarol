@@ -103,8 +103,8 @@
                     </a>
                 </div>
             </div>
-            <div>
-                <img src="/images/koparka.jpeg" alt="Usługi koparką i roboty ziemne w Narolu" class="h-full w-full rounded-2xl object-cover shadow-2xl">
+            <div class="overflow-hidden rounded-2xl shadow-2xl">
+                <img src="/images/koparka.jpeg" alt="Usługi koparką i roboty ziemne w Narolu" class="h-full w-full object-cover object-[50%_45%] scale-110 md:scale-150">
             </div>
         </div>
     </header>
@@ -188,7 +188,7 @@
                         <p class="font-bold text-yellow-300">FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</p>
                         <p class="mt-2"><span class="font-semibold text-gray-300">NIP:</span> 7931286479</p>
                         <p><span class="font-semibold text-gray-300">REGON:</span> 01540602900000</p>
-                        <p><span class="font-semibold text-gray-300">Adres:</span> UL. KOŚCIUSZKI DZ 415, PL-37-610, NAROL</p>
+                        <p><span class="font-semibold text-gray-300">Adres:</span> UL. KOŚCIUSZKI DZ 415, 37-610, NAROL</p>
                         <p><span class="font-semibold text-gray-300">Województwo:</span> podkarpackie</p>
                     </div>
                     <div class="rounded-xl border border-gray-700 bg-gray-800/60 p-5 text-sm">

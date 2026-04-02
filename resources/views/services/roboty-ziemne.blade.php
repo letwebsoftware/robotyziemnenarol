@@ -16,7 +16,7 @@
                 <a href="/" class="flex items-center space-x-2">
                     <img src="/logo_without_name.svg" alt="FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk" class="h-10 w-auto">
                     <div>
-                        <p class="font-bold text-lg">FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</p>
+                        <p class="font-bold text-lg">DZIURANIUK</p>
                         <p class="text-xs text-gray-600">Roboty Ziemne</p>
                     </div>
                 </a>

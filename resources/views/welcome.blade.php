@@ -63,7 +63,7 @@
             <a href="{{ route('home') }}" class="flex items-center gap-3">
                 <img src="/logo_without_name.svg" alt="FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk" class="h-10 w-auto">
                 <span class="leading-tight">
-                    <span class="block text-sm font-black uppercase tracking-wide text-gray-900">FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</span>
+                    <span class="block text-sm font-black uppercase tracking-wide text-gray-900">DZIURANIUK</span>
                     <span class="block text-xs text-gray-600">Roboty ziemne i transport kruszywa</span>
                 </span>
             </a>
@@ -182,17 +182,26 @@
         <div class="mx-auto max-w-7xl text-center">
             <h2 class="text-3xl font-black sm:text-4xl">Kontakt i szybka wycena</h2>
             <p class="mt-4 text-gray-300">Najszybszy kontakt telefoniczny.</p>
-            <div class="mt-8 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-8 sm:text-base">
-                <p><span class="font-bold text-yellow-300">Telefon główny:</span> <a href="tel:+48508392907" class="font-semibold text-white hover:text-yellow-200">+48 508 392 907</a></p>
-                <p><span class="font-bold text-yellow-300">Lokalizacja:</span> Narol i okolice</p>
-            </div>
             <div class="mx-auto mt-8 grid max-w-7xl gap-6 text-left md:grid-cols-3">
-                <div class="rounded-xl border border-gray-700 bg-gray-800/60 p-5 text-sm md:col-span-1">
-                    <p class="font-bold text-yellow-300">FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</p>
-                    <p class="mt-2"><span class="font-semibold text-gray-300">NIP:</span> 7931286479</p>
-                    <p><span class="font-semibold text-gray-300">REGON:</span> 01540602900000</p>
-                    <p><span class="font-semibold text-gray-300">Adres:</span> UL. KOŚCIUSZKI DZ 415, PL-37-610, NAROL</p>
-                    <p><span class="font-semibold text-gray-300">Województwo:</span> podkarpackie</p>
+                <div class="space-y-4 md:col-span-1">
+                    <div class="rounded-xl border border-gray-700 bg-gray-800/60 p-5 text-sm">
+                        <p class="font-bold text-yellow-300">FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk</p>
+                        <p class="mt-2"><span class="font-semibold text-gray-300">NIP:</span> 7931286479</p>
+                        <p><span class="font-semibold text-gray-300">REGON:</span> 01540602900000</p>
+                        <p><span class="font-semibold text-gray-300">Adres:</span> UL. KOŚCIUSZKI DZ 415, PL-37-610, NAROL</p>
+                        <p><span class="font-semibold text-gray-300">Województwo:</span> podkarpackie</p>
+                    </div>
+                    <div class="rounded-xl border border-gray-700 bg-gray-800/60 p-5 text-sm">
+                        <p class="font-bold text-yellow-300">Kontakt</p>
+                        <p class="mt-2">
+                            <span class="font-semibold text-gray-300">Tel. główny:</span>
+                            <a href="tel:+48508392907" class="font-semibold text-white hover:text-yellow-200">+48 508 392 907</a>
+                        </p>
+                        <p>
+                            <span class="font-semibold text-gray-300">Dodatkowy:</span>
+                            <a href="tel:+48509907121" class="font-semibold text-white hover:text-yellow-200">+48 509 907 121</a>
+                        </p>
+                    </div>
                 </div>
                 <div class="overflow-hidden rounded-xl border border-gray-700 md:col-span-2">
                     <h3 class="bg-gray-800/80 px-4 py-3 text-left text-sm font-bold text-yellow-300">Mapa dojazdu</h3>
@@ -216,7 +225,7 @@
     <footer class="bg-gray-900 px-4 py-8 text-sm text-gray-300">
         <div class="mx-auto flex max-w-7xl flex-col gap-2 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <p>&copy; {{ now()->year }} FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk - Roboty ziemne i transport kruszywa</p>
-            <p>Narol | Tel. główny: +48 508 392 907 | Dodatkowy: +48 509 907 121</p>
+            <p>Narol | UL. KOŚCIUSZKI DZ 415</p>
         </div>
     </footer>
 </body>

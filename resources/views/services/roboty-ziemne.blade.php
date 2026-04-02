@@ -205,6 +205,10 @@
             <hr class="border-gray-700 mb-4">
             <div class="text-center">
                 <p>&copy; {{ now()->year }} FIRMA HANDLOWO USŁUGOWA Lesław Józef Dziuraniuk - Roboty Ziemne. Wszelkie prawa zastrzeżone.</p>
+                <p class="mt-2 text-xs text-gray-400">
+                    Strona wykonana przez
+                    <a href="https://letwebsoftware.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-yellow-300 hover:text-yellow-200">letwebsoftware.com</a>
+                </p>
             </div>
         </div>
     </footer>

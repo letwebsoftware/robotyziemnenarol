@@ -43,7 +43,9 @@
                 "Narol",
                 "Lubaczów",
                 "Cieszanów",
-                "Tomaszów Lubelski"
+                "Tomaszów Lubelski",
+                "Zamość",
+                "Bełżec"
             ],
             "serviceType": [
                 "Roboty ziemne",
@@ -187,11 +189,16 @@
         <div class="mx-auto max-w-7xl">
             <h2 class="text-3xl font-black text-gray-900 sm:text-4xl">Obszar działania</h2>
             <p class="mt-3 text-gray-600">Dojeżdżamy na inwestycje lokalne i obsługujemy zamówienia z transportem materiałów.</p>
-            <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="rounded-lg border border-gray-200 bg-white p-4 text-center font-bold text-gray-800">Narol</div>
-                <div class="rounded-lg border border-gray-200 bg-white p-4 text-center font-bold text-gray-800">Lubaczów</div>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <a href="{{ route('home') }}" class="rounded-lg border border-yellow-400 bg-yellow-50 p-4 text-center font-bold text-gray-800 transition hover:shadow-sm">
+                    Narol
+                </a>
+                @foreach (config('locations') as $location)
+                    <a href="{{ route('locations.show', $location['slug']) }}" class="rounded-lg border border-gray-200 bg-white p-4 text-center font-bold text-gray-800 transition hover:border-yellow-400 hover:shadow-sm">
+                        {{ $location['name'] }}
+                    </a>
+                @endforeach
                 <div class="rounded-lg border border-gray-200 bg-white p-4 text-center font-bold text-gray-800">Cieszanów</div>
-                <div class="rounded-lg border border-gray-200 bg-white p-4 text-center font-bold text-gray-800">Tomaszów Lubelski</div>
             </div>
         </div>
     </section>

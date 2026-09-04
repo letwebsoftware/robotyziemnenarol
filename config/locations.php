@@ -1,0 +1,48 @@
+<?php
+
+return [
+    'lubaczow' => [
+        'slug' => 'lubaczow',
+        'name' => 'Lubaczów',
+        'name_locative' => 'Lubaczowie',
+        'title' => 'Roboty ziemne Lubaczów – koparka, wykopy, kruszywo',
+        'description' => 'Usługi koparką i roboty ziemne w Lubaczowie. Wykopy pod fundamenty, niwelacja, transport piasku i żwiru oraz wywóz gruzu. Sprawdź termin.',
+        'lead' => 'Kompleksowe roboty ziemne z dojazdem do Lubaczowa: koparka, przygotowanie terenu, transport materiałów i wywóz pozostałości.',
+        'context' => 'W Lubaczowie obsługujemy zarówno nowe budowy, jak i prace przy istniejących domach, firmach oraz posesjach. Zakres i sprzęt dobieramy do warunków na działce, dostępu do terenu oraz kolejnych etapów inwestycji.',
+        'needs' => 'Pomagamy przy wykopach fundamentowych i instalacyjnych, niwelacji działek, utwardzaniu wjazdów oraz przygotowaniu podłoża. W jednym zleceniu możemy połączyć pracę koparki z dostawą kruszywa i wywozem ziemi lub gruzu.',
+        'area_note' => 'Realizujemy zlecenia na terenie Lubaczowa i w sąsiednich miejscowościach powiatu lubaczowskiego.',
+    ],
+    'tomaszow-lubelski' => [
+        'slug' => 'tomaszow-lubelski',
+        'name' => 'Tomaszów Lubelski',
+        'name_locative' => 'Tomaszowie Lubelskim',
+        'title' => 'Roboty ziemne Tomaszów Lubelski – usługi koparką',
+        'description' => 'Roboty ziemne w Tomaszowie Lubelskim: koparka, wykopy, niwelacja, transport kruszywa i wywóz gruzu. Zadzwoń i ustal zakres prac.',
+        'lead' => 'Usługi koparką i transport materiałów dla inwestycji w Tomaszowie Lubelskim oraz pobliskich miejscowościach.',
+        'context' => 'Do Tomaszowa Lubelskiego dojeżdżamy na zaplanowane roboty przy budowie domów, obiektów gospodarczych, przyłączy i dróg wewnętrznych. Przed rozpoczęciem ustalamy dostęp do działki, ilość materiału i sposób zagospodarowania urobku.',
+        'needs' => 'Wykonujemy wykopy, korytowanie, profilowanie i podnoszenie terenu. Dostarczamy piasek lub żwir, a po zakończeniu prac możemy odebrać gruz, humus i nadmiar ziemi, ograniczając liczbę wykonawców potrzebnych na budowie.',
+        'area_note' => 'Obsługujemy Tomaszów Lubelski oraz uzgodnione lokalizacje w jego okolicy.',
+    ],
+    'zamosc' => [
+        'slug' => 'zamosc',
+        'name' => 'Zamość',
+        'name_locative' => 'Zamościu',
+        'title' => 'Roboty ziemne Zamość – wykopy i usługi koparką',
+        'description' => 'Roboty ziemne i usługi koparką w Zamościu. Wykopy, niwelacja działki, transport kruszywa oraz wywóz ziemi i gruzu. Zapytaj o wycenę.',
+        'lead' => 'Roboty ziemne z dojazdem do Zamościa — przygotowanie inwestycji, dostawy kruszywa i sprawna organizacja prac na działce.',
+        'context' => 'W Zamościu podejmujemy zaplanowane zlecenia wymagające koparki i transportu. Oferta jest skierowana do właścicieli działek, inwestorów, firm budowlanych i gospodarstw potrzebujących jednego wykonawcy do kilku powiązanych etapów robót.',
+        'needs' => 'Realizujemy wykopy pod fundamenty i przyłącza, niwelację oraz przygotowanie wjazdów i placów. Organizujemy dowóz odpowiedniego kruszywa, a także wywóz gruzu, humusu lub ziemi pozostałej po pracach.',
+        'area_note' => 'Termin i koszt dojazdu do Zamościa potwierdzamy podczas wyceny konkretnego zakresu robót.',
+    ],
+    'belzec' => [
+        'slug' => 'belzec',
+        'name' => 'Bełżec',
+        'name_locative' => 'Bełżcu',
+        'title' => 'Roboty ziemne Bełżec – koparka i transport kruszywa',
+        'description' => 'Usługi koparką i roboty ziemne w Bełżcu: wykopy, równanie terenu, transport piasku i żwiru oraz wywóz gruzu. Zadzwoń po wycenę.',
+        'lead' => 'Roboty ziemne w Bełżcu i okolicy: od wykopu i niwelacji po dowóz materiału oraz wywóz pozostałości.',
+        'context' => 'Bliskość Bełżca pozwala nam sprawnie obsługiwać lokalne budowy, posesje i prace gospodarcze. Przed realizacją uzgadniamy warunki wjazdu, oczekiwany poziom terenu oraz zakres transportu potrzebnego do zakończenia zadania.',
+        'needs' => 'W Bełżcu wykonujemy wykopy pod fundamenty i instalacje, równanie działek, korytowanie oraz przygotowanie dojazdów. Dostarczamy kruszywo i odbieramy gruz, humus lub nadmiar ziemi po robotach.',
+        'area_note' => 'Dojeżdżamy do Bełżca i pobliskich miejscowości po wcześniejszym ustaleniu zakresu prac.',
+    ],
+];

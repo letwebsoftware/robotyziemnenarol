@@ -177,9 +177,10 @@
                         <div class="mt-8 pt-8 border-t-2 border-yellow-200">
                             <h4 class="font-bold mb-4">Obszar Dostawy:</h4>
                             <ul class="space-y-2 text-gray-700">
-                                <li>Narol</li>
-                                <li>Lubaczów</li>
-                                <li>Tomaszów Lubelski</li>
+                                <li><a href="{{ route('home') }}" class="hover:text-yellow-600">Narol</a></li>
+                                @foreach (config('locations') as $location)
+                                    <li><a href="{{ route('locations.show', $location['slug']) }}" class="hover:text-yellow-600">{{ $location['name'] }}</a></li>
+                                @endforeach
                                 <li>Cieszanów</li>
                                 <li>Oraz okolice</li>
                             </ul>
